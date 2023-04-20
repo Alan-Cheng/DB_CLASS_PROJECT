@@ -1,0 +1,41 @@
+{% extends "backstage.html" %}
+{% block head %}
+{{ super() }}
+
+{% endblock head %}
+
+{% block title %}BookStore{% endblock title%}
+
+{% block content%}
+
+
+<br/>
+<div class="container-xl">
+  <br/>
+  <form method="post" enctype=multipart/form-data action={{ url_for('manager.editSupplier') }}>
+    <table class="table table-bordered">
+      <tr class="table-light">
+        <th>品牌</th>
+        <td>
+          <textarea class="form-control" name="sname">{{ data.品牌 }}</textarea>
+      </tr>
+      <tr class="table-light" style="height: 400px;">
+        <th>品牌敘述</th>
+        <td>
+          <textarea class="form-control" name="sdesc" style="height: 400px;">{{ data.品牌敘述 }}</textarea>
+        </td>
+      </tr>
+    </table>
+    <center>
+      <div class="option">
+        <button class="btn btn-success" type="submit">確定修改</button> 
+        <button class="btn btn-danger" onclick="return (confirm('編輯尚未完成，確定要返回嗎?'))">回品牌管理</button>
+      </div>
+    </center>
+
+  </form>
+</div>
+
+
+
+{% endblock content%}

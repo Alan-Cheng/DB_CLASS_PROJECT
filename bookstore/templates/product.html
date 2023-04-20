@@ -1,0 +1,56 @@
+{% extends "frontstage.html" %}
+{% block head %}
+{{ super() }}
+{% endblock head %}
+
+{% block title %}BookStore{% endblock title%}
+
+{% block content %}
+
+{% set temp = 'product/' + data.商品圖片 %}
+<form method="post" action={{ url_for('bookstore.cart') }}>
+<br/>
+<div class="row">
+<div class="card" style="width: 25rem;margin-left:10%">
+  <img src={{ url_for('static', filename = temp  ) }} class="card-img-top" style="margin-top: 10px;">
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"style="font-weight:bold;"><b>商品名稱</b>&nbsp;&nbsp;{{ data.商品名稱 }}</li>
+    <li class="list-group-item"style="font-weight:bold;"><b>品牌</b>&nbsp;&nbsp;{{ data.品牌 }}</li>
+    <li class="list-group-item"style="font-weight:bold;"><b>商品單價</b>&nbsp;&nbsp;{{ data.單價 }}</li>
+  </ul>
+  <div class="col-sm-4" style="display:flex;width:500px;margin-top: 20%;">
+    <a href="{{ url_for('bookstore.bookstore') }}" class="btn btn-primary" style="margin-left: 10%;margin-right:10%">回商品列表</a>
+    <button class="btn btn-warning" type="submit" value="{{data.商品編號}}" name="pid">加入購物車</button>
+    </form>
+  </div>
+</div>
+
+
+<div class="col-xl-6">
+  <form method="post" action={{ url_for('bookstore.cart') }}>
+<div class="card">
+  <h5 class="card-header">商品介紹</h5>
+  <div class="card-body">
+    <p class="card-text" style="background-color: rgba(255, 255, 255, 0);">
+      {{data.商品敘述}}
+    </p>
+  </div>
+  <div class="card">
+  <!--新增品牌介紹-->
+  <h5 class="card-header">品牌介紹</h5>
+  <div class="card-body">
+    <p class="card-text" style="background-color: rgba(255, 255, 255, 0);"">
+      {{data.品牌介紹}}
+    </p>
+  </div>
+</div>
+</div>
+</form>
+</div>
+
+
+</div>
+
+
+{% endblock content%}
