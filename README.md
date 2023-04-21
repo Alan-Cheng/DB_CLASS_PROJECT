@@ -1,6 +1,6 @@
 # 中山大學DBMS_CLASS 2023期中專案
 使用Flask開發的網路商店系統，後端使用Oracle資料庫
-參考課程提供教材:https://github.com/Text-Analytics-and-Retrieval/DB_CLASS_2023
+，參考課程提供教材:https://github.com/Text-Analytics-and-Retrieval/DB_CLASS_2023
 <br>
 
 ## 功能
