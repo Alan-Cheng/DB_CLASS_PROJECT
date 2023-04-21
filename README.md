@@ -11,7 +11,15 @@
 
 
 ## DEMO
-以下為進入畫面
+以下為進入畫面，若須使用該系統則必須先註冊(選擇一般使用者或是管理員)
 ![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/index.jpg)
+<br>
+
+註冊並登入一般會員後，可以開始使用購物功能，包含購物車與下訂單、取消訂單功能。
+
+![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/store.jpg)
+![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/cart.jpg)
+![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/order.jpg)
+<br>
 
 
