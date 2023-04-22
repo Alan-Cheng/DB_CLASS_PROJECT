@@ -15,11 +15,16 @@
 ![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/index.jpg)
 <br>
 
-註冊並登入一般會員後，可以開始使用購物功能，包含購物車與下訂單、取消訂單功能。
-
+### 一般會員:
+- 註冊並登入一般會員後，可以開始使用購物功能
 ![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/store.jpg)
+- 使用者可以在購物車內新增或刪除商品
 ![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/cart.jpg)
+- 使用者確認購物車內的內容後，可以成立訂單並檢視訂單狀態
 ![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/order.jpg)
 <br>
 
+### 使用管理員帳號
+- 使用管理員帳號可以進入後台系統，並使用管理的功能(包含商品、品牌、訂單、分析)
+![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/backstage.jpg)
 
