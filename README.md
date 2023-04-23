@@ -7,14 +7,14 @@
 - 以MVC架構開發。
 - 一般使用者可以瀏覽、搜尋、購買商品，並編輯訂單與購物車狀態。
 - 後台管理者可以編輯商品與品牌，並檢視每筆訂單以及商品銷售圖表。
-- 提供資料庫的新增、讀取、更新、刪除，並搭配簡易資料分析功能。
+- 資料庫的新增、讀取、更新、刪除，並搭配簡易資料分析功能。
 
 
 ## 資料庫實體關聯圖
 ![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/dbERD/ERD.png)
 
 ## DEMO
-以下為進入畫面，若須使用該系統則必須先註冊(選擇一般使用者或是管理員)
+以下為進入畫面，使用該系統必須先註冊(選擇一般使用者或是管理員)
 ![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/index.jpg)
 <br>
 
