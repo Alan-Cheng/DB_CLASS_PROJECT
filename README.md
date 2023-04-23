@@ -9,6 +9,8 @@
 - 後台管理者可以編輯商品與品牌，並檢視每筆訂單以及商品銷售圖表。
 - 資料庫的新增、讀取、更新、刪除，並搭配簡易資料分析功能。
 
+## 架構圖
+![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/SAD.png)
 
 ## 資料庫實體關聯圖
 ![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/dbERD/ERD.png)
