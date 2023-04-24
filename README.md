@@ -29,7 +29,7 @@
 ![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/order.jpg)
 <br>
 
-### 使用管理員帳號
+### 使用管理員帳號:
 - 使用管理員帳號可以進入後台系統，並使用管理的功能(包含商品、品牌、訂單、分析)
 ![image](https://github.com/Alan-Cheng/DB_CLASS_PROJECT/blob/main/demo/backstage.jpg)
 
