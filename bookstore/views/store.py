@@ -185,13 +185,10 @@ def cart():
                 time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 Cart.add_cart(current_user.id, time) # 幫他加一台購物車
                 data = Cart.get_cart(current_user.id) 
-                
-            cid = data[3] # 取得購物車編號(cId)
+            cid = int(data[0]) # 取得購物車編號(cId)
             pid = request.values.get('pid') # 使用者想要購買的東西
             # 檢查購物車裡面有沒有商品
             product = CONTAIN.check_product(cid, pid)
-            # 取得商品價錢
-            price = Product.get_product(pid)[2]
 
             # 如果購物車裡面沒有的話 把他加一個進去
             if(product == None):
@@ -203,7 +200,7 @@ def cart():
 
         elif "delete" in request.form :
             pid = request.values.get('delete')
-            cid = Cart.get_cart(current_user.id)[3]
+            cid = Cart.get_cart(current_user.id)[0]
             
             Member.delete_product(cid, pid)
             product_data = only_cart()
@@ -217,7 +214,7 @@ def cart():
             return redirect(url_for('bookstore.order'))
 
         elif "order" in request.form:
-            cid = Cart.get_cart(current_user.id)[3]
+            cid = Cart.get_cart(current_user.id)[0]
             total = CONTAIN.get_total(cid)
 
             time = str(datetime.now().strftime('%Y/%m/%d %H:%M:%S'))
@@ -246,8 +243,7 @@ def cart():
 @store.route('/order')
 def order():
     data = Cart.get_cart(current_user.id)
-    cid = data[3]
-
+    cid = data[0]
     product_row = CONTAIN.get_record(cid)
     product_data = []
 
@@ -283,9 +279,9 @@ def orderlist():
 
     for i in data:
         temp = {
-            '訂單編號': i[3],
-            '訂單總價': CONTAIN.get_total(i[2]),
-            '訂單時間': i[1]
+            '訂單編號': i[0],
+            '訂單總價': CONTAIN.get_total(i[3]),
+            '訂單時間': i[2]
         }
         orderlist.append(temp)
     
@@ -306,7 +302,7 @@ def orderlist():
 
 def change_order():
     data = Cart.get_cart(current_user.id)
-    cid = data[3] # 使用者有購物車了，取得購物車編號
+    cid = data[0] # 使用者有購物車了，取得購物車編號
     product_row = CONTAIN.get_record(cid)
 
     for i in product_row:
@@ -326,14 +322,12 @@ def change_order():
 
 
 def only_cart():
-    
     count = Cart.check(current_user.id)
-
     if(count == None):
         return 0
     
     data = Cart.get_cart(current_user.id)
-    cid = data[3]
+    cid = data[0]
     product_row = CONTAIN.get_record(cid)
     product_data = []
 

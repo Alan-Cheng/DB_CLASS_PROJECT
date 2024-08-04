@@ -1,8 +1,9 @@
-import oracledb
+import mysql.connector
 
-connection = oracledb.connect(
-    user = 'GROUP15',
-    password = 'mIdrROfKPu',
-    dsn = oracledb.makedsn('140.117.69.60', 1521, service_name = 'ORCLPDB1')
+# 連接到 MySQL 資料庫
+connection = mysql.connector.connect(
+    user='root',
+    password='',
+    host='localhost',
+    database='3CSHOP'
 )
-cursor = connection.cursor()
